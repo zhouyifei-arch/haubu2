@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (5.11.1)
+  - Kingfisher (8.8.0)
+  - MJRefresh (3.7.9)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Realm (20.0.4):
+    - Realm/Headers (= 20.0.4)
+  - Realm/Headers (20.0.4)
+  - RealmSwift (20.0.4):
+    - Realm (= 20.0.4)
+  - SnapKit (5.7.1)
+
+DEPENDENCIES:
+  - Kingfisher
+  - MJRefresh
+  - Moya
+  - RealmSwift
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - MJRefresh
+    - Moya
+    - Realm
+    - RealmSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: eec6cd8f73b242b59e34153a606a909eb9864b14
+  Kingfisher: beeaf65ed57dfa710d416aea4093277e8a9b1968
+  MJRefresh: ff9e531227924c84ce459338414550a05d2aea78
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  Realm: 1fca83c42ac1d5c7767974882c8de5a7abca4d89
+  RealmSwift: 84f36320f6133dea78d05c55bb46bba4387d6828
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+
+PODFILE CHECKSUM: b7f2493e86ef80a25b8427106a7e0f39701de7f3
+
+COCOAPODS: 1.16.2

@@ -6,8 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		21555CE31AF5A5CF966F7597 /* Pods_huabu2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF23A6BF217C53512165F1 /* Pods_huabu2.framework */; };
+		70A0D4892F62598200078741 /* BackgroundRemoval in Frameworks */ = {isa = PBXBuildFile; productRef = 70A0D4882F62598200078741 /* BackgroundRemoval */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		11D0DB197DEB42B91859AA95 /* Pods-huabu2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huabu2.release.xcconfig"; path = "Target Support Files/Pods-huabu2/Pods-huabu2.release.xcconfig"; sourceTree = "<group>"; };
+		4CBF23A6BF217C53512165F1 /* Pods_huabu2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_huabu2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A0D3302F5E56A800078741 /* huabu2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = huabu2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D71E993E3C114711D4BC324 /* Pods-huabu2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-huabu2.debug.xcconfig"; path = "Target Support Files/Pods-huabu2/Pods-huabu2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +44,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21555CE31AF5A5CF966F7597 /* Pods_huabu2.framework in Frameworks */,
+				70A0D4892F62598200078741 /* BackgroundRemoval in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12DB31A5FBA97AE821DD8058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CBF23A6BF217C53512165F1 /* Pods_huabu2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		70A0D3272F5E56A800078741 = {
 			isa = PBXGroup;
 			children = (
 				70A0D3322F5E56A800078741 /* huabu2 */,
 				70A0D3312F5E56A800078741 /* Products */,
+				F81F6E5672C78641FC77CD90 /* Pods */,
+				12DB31A5FBA97AE821DD8058 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +78,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F81F6E5672C78641FC77CD90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D71E993E3C114711D4BC324 /* Pods-huabu2.debug.xcconfig */,
+				11D0DB197DEB42B91859AA95 /* Pods-huabu2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70A0D3432F5E56A900078741 /* Build configuration list for PBXNativeTarget "huabu2" */;
 			buildPhases = (
+				921A54C7AD7CE556F12A8A1D /* [CP] Check Pods Manifest.lock */,
 				70A0D32C2F5E56A800078741 /* Sources */,
 				70A0D32D2F5E56A800078741 /* Frameworks */,
 				70A0D32E2F5E56A800078741 /* Resources */,
+				998E5F70B587A0C303E65CFA /* [CP] Embed Pods Frameworks */,
+				70B7B15F2F70D45600AA65FC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -77,8 +109,6 @@
 				70A0D3322F5E56A800078741 /* huabu2 */,
 			);
 			name = huabu2;
-			packageProductDependencies = (
-			);
 			productName = huabu2;
 			productReference = 70A0D3302F5E56A800078741 /* huabu2.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +137,9 @@
 			);
 			mainGroup = 70A0D3272F5E56A800078741;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				70A0D4872F62598200078741 /* XCRemoteSwiftPackageReference "BackgroundRemoval" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 70A0D3312F5E56A800078741 /* Products */;
 			projectDirPath = "";
@@ -127,6 +160,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70B7B15F2F70D45600AA65FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export GEMINI_API_KEY=\"AIzaSyC3YA3FBEtBFvvtKBcJ36eone2irQuqFw4\"\n# 1. 确保能找到 gemini 和 node\nexport PATH=\"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH\"\n\n";
+		};
+		921A54C7AD7CE556F12A8A1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-huabu2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		998E5F70B587A0C303E65CFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-huabu2/Pods-huabu2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-huabu2/Pods-huabu2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-huabu2/Pods-huabu2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		70A0D32C2F5E56A800078741 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,11 +236,13 @@
 /* Begin XCBuildConfiguration section */
 		70A0D3442F5E56A900078741 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D71E993E3C114711D4BC324 /* Pods-huabu2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = huabu2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -152,6 +250,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -171,11 +270,13 @@
 		};
 		70A0D3452F5E56A900078741 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D0DB197DEB42B91859AA95 /* Pods-huabu2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = huabu2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -183,6 +284,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +443,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		70A0D4872F62598200078741 /* XCRemoteSwiftPackageReference "BackgroundRemoval" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ezaldeen99/BackgroundRemoval.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70A0D4882F62598200078741 /* BackgroundRemoval */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70A0D4872F62598200078741 /* XCRemoteSwiftPackageReference "BackgroundRemoval" */;
+			productName = BackgroundRemoval;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 70A0D3282F5E56A800078741 /* Project object */;
 }
