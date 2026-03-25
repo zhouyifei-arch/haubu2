@@ -12,6 +12,7 @@ class ProfileViewModel {
     // 格式化后的统计数据
     var stats: [(count: String, title: String)] {
         return [
+            ("0", "作品"),
             (format(user.followingCount), "关注"),
             (format(user.followerCount), "粉丝"),
             (format(user.collectCount), "获赞与收藏")
