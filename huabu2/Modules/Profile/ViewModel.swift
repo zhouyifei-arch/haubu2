@@ -1,11 +1,11 @@
 import Foundation
 
 class ProfileViewModel {
-    private let user: UserProfile
+    private var user: UserProfile
     
-    let name: String
+    private(set) var name: String
     let displayRedId: String
-    let bio: String
+    private(set) var bio: String
     let avatarName: String
     let bgName: String
     
@@ -25,6 +25,21 @@ class ProfileViewModel {
         self.bio = user.bio.isEmpty ? "点击添加简介" : user.bio
         self.avatarName = user.avatarName
         self.bgName = user.bgImageName
+    }
+    
+    func update(name: String, bio: String) {
+        user = UserProfile(
+            name: name,
+            redId: user.redId,
+            bio: bio,
+            avatarName: user.avatarName,
+            bgImageName: user.bgImageName,
+            followingCount: user.followingCount,
+            followerCount: user.followerCount,
+            collectCount: user.collectCount
+        )
+        self.name = user.name
+        self.bio = user.bio.isEmpty ? "点击添加简介" : user.bio
     }
     
     private func format(_ count: Int) -> String {
